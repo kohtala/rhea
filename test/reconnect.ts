@@ -360,7 +360,7 @@ describe('remote close with fatal error', function() {
         var receiver: rhea.Receiver = c.open_receiver('foo');
         var sender: rhea.Sender = c.open_sender('foo');
         c.on('disconnected', function (context) {
-            assert.fail('disconnected shouldnt have been called')
+            assert.fail('disconnected shouldnt have been called');
         });
         c.on('connection_error', function (context) {
             connection_errors++;
